@@ -1,0 +1,74 @@
+[
+  {
+    "id": "531f513289104673b3882839f3d3414f",
+    "name": "James Potter",
+    "birth": "1960-03-27",
+    "zodiac": "zodiac_aries"
+  },
+  {
+    "id": "e95c16b4647148d9a857c97e07881c96",
+    "name": "Fred Weasley",
+    "birth": "1978-04-01",
+    "zodiac": "zodiac_aries"
+  },
+  {
+    "id": "d7f7ffd9159549829ffcc2439fbd63e5",
+    "name": "Dolores Umbridge",
+    "birth": "1955-04-26",
+    "zodiac": "zodiac_taurus"
+  },
+  {
+    "id": "35cf4ee1fa95444586d70846a5d62dc0",
+    "name": "Harry Potter",
+    "birth": "1980-07-31",
+    "zodiac": "zodiac_leo"
+  },
+  {
+    "id": "7f3b3a1b887443edab5aac38b9736790",
+    "name": "Neville Longbottom",
+    "birth": "1980-07-30",
+    "zodiac": "zodiac_leo"
+  },
+  {
+    "id": "25f7e57e4dfa4e8d96fb6525153207f0",
+    "name": "Draco Malfoy",
+    "birth": "1980-06-05",
+    "zodiac": "zodiac_gemini"
+  },
+  {
+    "id": "5ebd3a271c1b42908e3792929a1423bc",
+    "name": "Hermione Granger",
+    "birth": "1979-09-19",
+    "zodiac": "zodiac_virgo"
+  },
+  {
+    "id": "8ccf9ad35ad14f11b665f09da1563e5e",
+    "name": "Minerva McGonagall",
+    "birth": "1935-10-04",
+    "zodiac": "zodiac_libra"
+  },
+  {
+    "id": "dd1c086b626b4dcfb025770fae272611",
+    "name": "Severus Snape",
+    "birth": "1960-01-09",
+    "zodiac": "zodiac_capricorn"
+  },
+  {
+    "id": "eb59e4eb1ab245cc810c4b4bd9ee222f",
+    "name": "Luna Lovegood",
+    "birth": "1981-02-13",
+    "zodiac": "zodiac_aquarius"
+  },
+  {
+    "id": "ccebac38709e45599cc0df35ffa13204",
+    "name": "Ron Weasley",
+    "birth": "1980-03-01",
+    "zodiac": "zodiac_pisces"
+  },
+  {
+    "id": "432a3a9828144f2897ea2024829df5f7",
+    "name": "Remus Lupin",
+    "birth": "1960-03-10",
+    "zodiac": "zodiac_pisces"
+  }
+]

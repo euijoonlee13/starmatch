@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ t(lang, "result_title") }}</title>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+      color: #fff;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: #ffffff;
+      color: #333;
+      padding: 32px 40px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .actions a {
+      color: #6c5ce7;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .actions a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <h1>{{ t(lang, "result_title") }}</h1>
+
+    <p class="message">
+      {{ message }}
+    </p>
+
+    <div class="actions">
+      <a href="javascript:history.back()">
+        {{ t(lang, "back") }}
+      </a>
+      |
+      <a href="/">
+        {{ t(lang, "back_home") }}
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>

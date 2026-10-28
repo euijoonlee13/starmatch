@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ t(lang, "step2_title") }}</title>
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+      color: #fff;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: #ffffff;
+      color: #333;
+      padding: 32px 40px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    .info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    hr {
+      margin: 30px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #6c5ce7;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+
+    button:hover {
+      background: #5a4bdc;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .back {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back a {
+      color: #6c5ce7;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <h1>{{ t(lang, "step2_title") }}</h1>
+
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <div class="info">
+      <p>{{ t(lang, "your_name") }}: <strong>{{ user.name }}</strong></p>
+      <p>{{ t(lang, "your_zodiac") }}: <strong>{{ t(lang, user.zodiac) }}</strong></p>
+    </div>
+
+    <h2>{{ t(lang, "best_zodiacs") }}</h2>
+    <ul>
+      {% for z, sc in best %}
+        <li>{{ t(lang, z) }} — {{ sc }}%</li>
+      {% endfor %}
+    </ul>
+
+    <h2>{{ t(lang, "worst_zodiacs") }}</h2>
+    <ul>
+      {% for z, sc in worst %}
+        <li>{{ t(lang, z) }} — {{ sc }}%</li>
+      {% endfor %}
+    </ul>
+
+    <hr/>
+
+    <h2>{{ t(lang, "have_partner") }}</h2>
+
+    <h3>{{ t(lang, "yes") }}</h3>
+    <form method="POST" action="/couple">
+      <label>{{ t(lang, "partner_name") }}</label>
+      <input name="partner_name" required />
+
+      <label>{{ t(lang, "partner_birth") }}</label>
+      <input name="partner_birth" type="date" required />
+
+      <button type="submit">
+        {{ t(lang, "check_match") }}
+      </button>
+    </form>
+
+    <hr/>
+
+    <h3>{{ t(lang, "no") }}</h3>
+    <form method="POST" action="/recommend">
+      <p style="text-align:center">
+        {{ t(lang, "recommend_question") }}
+      </p>
+      <button type="submit">
+        {{ t(lang, "recommend") }}
+      </button>
+    </form>
+
+    <div class="back">
+      <a href="/">{{ t(lang, "back_home") }}</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
